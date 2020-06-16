@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>People in space</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/Bootstrap-4---Table-Fixed-Header.css">
+</head>
+
+<body id="page-top">
+<header class="d-flex masthead" style="background-image: url(&quot;assets/img/pexels-photo-220201.jpeg&quot;);">
+    <div class="container my-auto text-center">
+        <h1 class="mb-1" style="color: rgb(255,255,255);">People in Space</h1>
+        <h3 class="mb-5"><em style="color: rgb(255,255,255);"><br>so how many people are in space right now<br><br></em></h3><a class="btn btn-primary btn-xl js-scroll-trigger" role="button" href="#contact">Check it out!</a>
+        <div class="overlay"></div>
+    </div>
+</header>
+<div style="height: 69px;"></div>
+<section id="contact" class="map" style="height: 371px;">
+    <div class="table-responsive text-center" style="padding: 0px;">
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Last Name</th>
+                <th>Nationality</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="person : ${listOfPeople}">
+                <td th:text="${person.name}"></td>
+                <td th:text="${person.lastName}"></td>
+                <td th:text="${person.nationality}"></td>
+            </tr>
+            <tr></tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+<footer class="footer text-center" style="height: 38px;">
+    <div class="container">
+        <p class="text-muted mb-0 small">Copyright &nbsp;© | Made with ☕ by&nbsp;<a href="https://github.com/agiklo">Mateusz Milewczyk</a><br></p>
+    </div><a class="js-scroll-trigger scroll-to-top rounded" href="#page-top"><i class="fa fa-angle-up"></i></a></footer>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<script src="assets/js/stylish-portfolio.js"></script>
+</body>
+
+</html>
